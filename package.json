@@ -1,0 +1,26 @@
+{
+  "name": "Breath",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:sass": "node-sass -r --output-style compressed src/scss/index.scss -o dist",
+    "watch:sass": "npm run build:sass && npm run build:sass -- -w"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PauloARibeiro/breath.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PauloARibeiro/breath/issues"
+  },
+  "homepage": "https://github.com/PauloARibeiro/breath#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
