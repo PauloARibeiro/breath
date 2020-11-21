@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:sass": "node-sass -r --output-style compressed src/scss/index.scss -o dist",
-    "sass": "npm run build:sass && npm run build:sass -- -w"
+    "build:sass": "node-sass -r --output-style compressed src/scss/* -o dist",
+    "sass": "node-sass -w src/scss/index.scss -o dist/css --recursive"
   },
   "repository": {
     "type": "git",

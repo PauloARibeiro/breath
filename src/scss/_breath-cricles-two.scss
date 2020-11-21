@@ -1,0 +1,75 @@
+$size: 50px;
+
+@mixin size($multipler) {
+  width: calc(#{$size * $multipler});
+  height: calc(#{$size * $multipler});
+}
+
+@mixin animate($name, $multipler) {
+  @keyframes #{$name} {
+    5% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale($multipler);
+    }
+  }
+}
+
+body {
+  background: lightsalmon;
+}
+
+#breath-circles-two {
+  // h1 {
+  //   &::before {
+  //     content: 'Inhale';
+  //     color: white;
+  //     animation-name: toggle-text;
+  //     animation-duration: 8s;
+  //     animation-iteration-count: infinite;
+  //     animation-direction: alternate;
+  //     animation-timing-function: ease-in-out;
+  //   }
+
+  //   @keyframes toggle-text {
+  //     0% {
+  //       content: 'Inhale';
+  //     }
+
+  //     100% {
+  //       content: 'Exhale';
+  //     }
+  //   }
+  // }
+  .circle {
+    border-radius: 50%;
+    border: 1px solid white;
+    background: teal;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: scale(1);
+    transform-origin: bottom;
+
+    @include size(1);
+
+    $zIndex: 7;
+
+    @for $i from 1 to 7 {
+      &:nth-child(#{$i}) {
+        animation-name: inhale-#{$i};
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        z-index: $zIndex;
+
+        @include animate(inhale-#{$i}, #{$i + 1});
+
+        $zIndex: $zIndex - 1;
+      }
+    }
+  }
+}
