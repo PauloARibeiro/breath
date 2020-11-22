@@ -1,5 +1,42 @@
-h1 {
-  color: blue;
+.circles-animation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: lightseagreen;
+}
+
+.circles-animation .circle-dark {
+  width: 5rem;
+  height: 5rem;
+  background: darkblue;
+  border-radius: 50%;
+}
+
+.circles-animation .circle-light {
+  width: 5rem;
+  height: 5rem;
+  background: beige;
+  border-radius: 50%;
+}
+
+span {
+  font-family: 'Helvetica', 'Verdana', 'Arial', sans;
+  letter-spacing: 2vh;
+  font-size: 5vh;
+  font-weight: light;
+  text-transform: uppercase;
 }
 
 #breath-circles-two {
@@ -261,5 +298,10 @@ body,
 html {
   margin: 0;
   padding: 0;
+}
+
+* {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 /*# sourceMappingURL=index.css.map */

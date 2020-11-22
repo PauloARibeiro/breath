@@ -1,3 +1,31 @@
-h1 {
-  color: blue;
+.circles-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: lightseagreen;
+
+  .circle-dark {
+    width: 5rem;
+    height: 5rem;
+    background: darkblue;
+    border-radius: 50%;
+  }
+
+  .circle-light {
+    width: 5rem;
+    height: 5rem;
+    background: beige;
+    border-radius: 50%;
+  }
+}
+
+span {
+  font-family: 'Helvetica', 'Verdana', 'Arial', sans;
+  letter-spacing: 2vh;
+  font-size: 5vh;
+  font-weight: light;
+  text-transform: uppercase;
 }
