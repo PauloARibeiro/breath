@@ -2,64 +2,64 @@ h1 {
   color: blue;
 }
 
-body {
-  background: lightsalmon;
+#breath-circles-two {
+  background: #b295cf;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#breath-circles-two .circle {
+#breath-circles-two .breath-with,
+#breath-circles-two .inhale {
+  color: #f6f9f9;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#breath-circles-two .circles {
+  position: relative;
+  width: 560px;
+  height: 560px;
+  margin: 10px 0;
+}
+
+#breath-circles-two .circles .circle {
   border-radius: 50%;
-  border: 1px solid white;
-  background: teal;
+  border: 2px solid #f6f9f9;
+  background: #95cfc3;
   position: absolute;
   bottom: 0;
   left: 50%;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: translate(-50%, 0%) scale(1);
+          transform: translate(-50%, 0%) scale(1);
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
-  width: calc(50px);
-  height: calc(50px);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+  width: calc(180px);
+  height: calc(180px);
 }
 
-#breath-circles-two .circle:nth-child(1) {
-  -webkit-animation-name: inhale-1;
-          animation-name: inhale-1;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+#breath-circles-two .circles .circle:nth-child(2) {
   z-index: 7;
 }
 
-@-webkit-keyframes inhale-1 {
-  5% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(2);
-            transform: scale(2);
-  }
-}
-
-@keyframes inhale-1 {
-  5% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(2);
-            transform: scale(2);
-  }
-}
-
-#breath-circles-two .circle:nth-child(2) {
-  -webkit-animation-name: inhale-2;
-          animation-name: inhale-2;
+#breath-circles-two .circles .circle:nth-child(3) {
+  -webkit-animation-name: inhale-3;
+          animation-name: inhale-3;
   -webkit-animation-duration: 6s;
           animation-duration: 6s;
   -webkit-animation-iteration-count: infinite;
@@ -71,31 +71,35 @@ body {
   z-index: 6;
 }
 
-@-webkit-keyframes inhale-2 {
+@-webkit-keyframes inhale-3 {
   5% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translate(-50%, 0%) scale(1);
+            transform: translate(-50%, 0%) scale(1);
+    content: 'inhale';
   }
   100% {
-    -webkit-transform: scale(3);
-            transform: scale(3);
+    -webkit-transform: translate(-50%, 0%) scale(1.5);
+            transform: translate(-50%, 0%) scale(1.5);
+    content: 'exhale';
   }
 }
 
-@keyframes inhale-2 {
+@keyframes inhale-3 {
   5% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translate(-50%, 0%) scale(1);
+            transform: translate(-50%, 0%) scale(1);
+    content: 'inhale';
   }
   100% {
-    -webkit-transform: scale(3);
-            transform: scale(3);
+    -webkit-transform: translate(-50%, 0%) scale(1.5);
+            transform: translate(-50%, 0%) scale(1.5);
+    content: 'exhale';
   }
 }
 
-#breath-circles-two .circle:nth-child(3) {
-  -webkit-animation-name: inhale-3;
-          animation-name: inhale-3;
+#breath-circles-two .circles .circle:nth-child(4) {
+  -webkit-animation-name: inhale-4;
+          animation-name: inhale-4;
   -webkit-animation-duration: 6s;
           animation-duration: 6s;
   -webkit-animation-iteration-count: infinite;
@@ -107,31 +111,35 @@ body {
   z-index: 5;
 }
 
-@-webkit-keyframes inhale-3 {
+@-webkit-keyframes inhale-4 {
   5% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translate(-50%, 0%) scale(1);
+            transform: translate(-50%, 0%) scale(1);
+    content: 'inhale';
   }
   100% {
-    -webkit-transform: scale(4);
-            transform: scale(4);
+    -webkit-transform: translate(-50%, 0%) scale(2);
+            transform: translate(-50%, 0%) scale(2);
+    content: 'exhale';
   }
 }
 
-@keyframes inhale-3 {
+@keyframes inhale-4 {
   5% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translate(-50%, 0%) scale(1);
+            transform: translate(-50%, 0%) scale(1);
+    content: 'inhale';
   }
   100% {
-    -webkit-transform: scale(4);
-            transform: scale(4);
+    -webkit-transform: translate(-50%, 0%) scale(2);
+            transform: translate(-50%, 0%) scale(2);
+    content: 'exhale';
   }
 }
 
-#breath-circles-two .circle:nth-child(4) {
-  -webkit-animation-name: inhale-4;
-          animation-name: inhale-4;
+#breath-circles-two .circles .circle:nth-child(5) {
+  -webkit-animation-name: inhale-5;
+          animation-name: inhale-5;
   -webkit-animation-duration: 6s;
           animation-duration: 6s;
   -webkit-animation-iteration-count: infinite;
@@ -143,31 +151,35 @@ body {
   z-index: 4;
 }
 
-@-webkit-keyframes inhale-4 {
+@-webkit-keyframes inhale-5 {
   5% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translate(-50%, 0%) scale(1);
+            transform: translate(-50%, 0%) scale(1);
+    content: 'inhale';
   }
   100% {
-    -webkit-transform: scale(5);
-            transform: scale(5);
+    -webkit-transform: translate(-50%, 0%) scale(2.5);
+            transform: translate(-50%, 0%) scale(2.5);
+    content: 'exhale';
   }
 }
 
-@keyframes inhale-4 {
+@keyframes inhale-5 {
   5% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translate(-50%, 0%) scale(1);
+            transform: translate(-50%, 0%) scale(1);
+    content: 'inhale';
   }
   100% {
-    -webkit-transform: scale(5);
-            transform: scale(5);
+    -webkit-transform: translate(-50%, 0%) scale(2.5);
+            transform: translate(-50%, 0%) scale(2.5);
+    content: 'exhale';
   }
 }
 
-#breath-circles-two .circle:nth-child(5) {
-  -webkit-animation-name: inhale-5;
-          animation-name: inhale-5;
+#breath-circles-two .circles .circle:nth-child(6) {
+  -webkit-animation-name: inhale-6;
+          animation-name: inhale-6;
   -webkit-animation-duration: 6s;
           animation-duration: 6s;
   -webkit-animation-iteration-count: infinite;
@@ -179,31 +191,35 @@ body {
   z-index: 3;
 }
 
-@-webkit-keyframes inhale-5 {
+@-webkit-keyframes inhale-6 {
   5% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translate(-50%, 0%) scale(1);
+            transform: translate(-50%, 0%) scale(1);
+    content: 'inhale';
   }
   100% {
-    -webkit-transform: scale(6);
-            transform: scale(6);
+    -webkit-transform: translate(-50%, 0%) scale(3);
+            transform: translate(-50%, 0%) scale(3);
+    content: 'exhale';
   }
 }
 
-@keyframes inhale-5 {
+@keyframes inhale-6 {
   5% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translate(-50%, 0%) scale(1);
+            transform: translate(-50%, 0%) scale(1);
+    content: 'inhale';
   }
   100% {
-    -webkit-transform: scale(6);
-            transform: scale(6);
+    -webkit-transform: translate(-50%, 0%) scale(3);
+            transform: translate(-50%, 0%) scale(3);
+    content: 'exhale';
   }
 }
 
-#breath-circles-two .circle:nth-child(6) {
-  -webkit-animation-name: inhale-6;
-          animation-name: inhale-6;
+#breath-circles-two .circles .circle:nth-child(7) {
+  -webkit-animation-name: inhale-7;
+          animation-name: inhale-7;
   -webkit-animation-duration: 6s;
           animation-duration: 6s;
   -webkit-animation-iteration-count: infinite;
@@ -215,25 +231,35 @@ body {
   z-index: 2;
 }
 
-@-webkit-keyframes inhale-6 {
+@-webkit-keyframes inhale-7 {
   5% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translate(-50%, 0%) scale(1);
+            transform: translate(-50%, 0%) scale(1);
+    content: 'inhale';
   }
   100% {
-    -webkit-transform: scale(7);
-            transform: scale(7);
+    -webkit-transform: translate(-50%, 0%) scale(3.5);
+            transform: translate(-50%, 0%) scale(3.5);
+    content: 'exhale';
   }
 }
 
-@keyframes inhale-6 {
+@keyframes inhale-7 {
   5% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translate(-50%, 0%) scale(1);
+            transform: translate(-50%, 0%) scale(1);
+    content: 'inhale';
   }
   100% {
-    -webkit-transform: scale(7);
-            transform: scale(7);
+    -webkit-transform: translate(-50%, 0%) scale(3.5);
+            transform: translate(-50%, 0%) scale(3.5);
+    content: 'exhale';
   }
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
 /*# sourceMappingURL=index.css.map */
