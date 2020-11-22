@@ -1,31 +1,143 @@
 .circles-animation {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: lightseagreen;
 
-  .circle-dark {
-    width: 5rem;
-    height: 5rem;
-    background: darkblue;
+  .circle {
+    position: absolute;
     border-radius: 50%;
+  }
+
+  .circle-dark {
+    width: 40rem;
+    height: 40rem;
+    background: darkblue;
+    animation: 14s dark infinite ease-in-out;
+    animation-timing-function: ease-in-out;
   }
 
   .circle-light {
-    width: 5rem;
-    height: 5rem;
+    width: 20rem;
+    height: 20rem;
     background: beige;
-    border-radius: 50%;
+    animation: light 14s infinite ease-in-out;
   }
 }
 
-span {
-  font-family: 'Helvetica', 'Verdana', 'Arial', sans;
-  letter-spacing: 2vh;
-  font-size: 5vh;
-  font-weight: light;
-  text-transform: uppercase;
+.text {
+  display: flex;
+  align-self: flex-end;
+  position: absolute;
+  margin-bottom: 2rem;
+  flex-direction: column;
+
+  span {
+    font-family: 'Helvetica', 'Verdana', 'Arial', sans;
+    letter-spacing: 2vh;
+    font-size: 1rem;
+    font-weight: light;
+    text-transform: uppercase;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+
+    &.inhale {
+      animation-name: inhale;
+    }
+
+    &.exhale {
+      animation-name: exhale;
+    }
+  }
+}
+
+@keyframes inhale {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  10% {
+    display: block;
+    opacity: 0;
+  }
+  15% {
+    display: block;
+    opacity: 1;
+  }
+  40% {
+    display: block;
+    opacity: 1;
+  }
+  45% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@keyframes exhale {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  60% {
+    display: none;
+    opacity: 0;
+  }
+  61% {
+    display: block;
+    opacity: 0;
+  }
+  65% {
+    display: block;
+    opacity: 1;
+  }
+  95% {
+    display: block;
+    opacity: 1;
+  }
+  99% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@keyframes light {
+  0%,
+  100% {
+    -webkit-transform: scale(0.4);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes dark {
+  0% {
+    -webkit-transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    -webkit-transform: scale(0.4);
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0.6;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0.5;
+  }
 }
