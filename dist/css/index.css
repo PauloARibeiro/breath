@@ -1,0 +1,228 @@
+.circles-animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: lightseagreen; }
+  .circles-animation .circle {
+    position: absolute;
+    border-radius: 50%; }
+  .circles-animation .circle-dark {
+    width: 60rem;
+    height: 60rem;
+    background: darkblue;
+    animation: 14s dark infinite ease-in-out;
+    animation-timing-function: ease-in-out; }
+  .circles-animation .circle-light {
+    width: 20rem;
+    height: 20rem;
+    background: beige;
+    animation: light 14s infinite ease-in-out; }
+
+.text {
+  display: flex;
+  align-self: flex-end;
+  position: absolute;
+  margin-bottom: 2rem;
+  flex-direction: column; }
+  .text span {
+    font-family: 'Helvetica', 'Verdana', 'Arial', sans;
+    letter-spacing: 2vh;
+    font-size: 1rem;
+    font-weight: light;
+    text-transform: uppercase;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-duration: 14s;
+    animation-iteration-count: infinite; }
+    .text span.inhale {
+      animation-name: inhale; }
+    .text span.exhale {
+      animation-name: exhale; }
+
+.center {
+  width: 30rem;
+  overflow: hidden;
+  position: relative;
+  display: flex; }
+
+@keyframes inhale {
+  0% {
+    display: none;
+    opacity: 0; }
+  10% {
+    display: block;
+    opacity: 0; }
+  20% {
+    display: block;
+    opacity: 1; }
+  40% {
+    display: block;
+    opacity: 1; }
+  45% {
+    display: block;
+    opacity: 0; }
+  100% {
+    display: none;
+    opacity: 0; } }
+
+@keyframes exhale {
+  0% {
+    display: none;
+    opacity: 0; }
+  60% {
+    display: none;
+    opacity: 0; }
+  61% {
+    display: block;
+    opacity: 0; }
+  75% {
+    display: block;
+    opacity: 1; }
+  95% {
+    display: block;
+    opacity: 1; }
+  99% {
+    display: block;
+    opacity: 0; }
+  100% {
+    display: none;
+    opacity: 0; } }
+
+@keyframes light {
+  0%,
+  100% {
+    -webkit-transform: scale(0.4); }
+  50% {
+    -webkit-transform: scale(1); } }
+
+@keyframes dark {
+  0% {
+    -webkit-transform: scale(1);
+    opacity: 0.5; }
+  50% {
+    -webkit-transform: scale(0.3);
+    opacity: 1; }
+  80% {
+    opacity: 0.6; }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0.5; } }
+
+#breath-circles-two {
+  background: #b295cf;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #breath-circles-two .breath-with,
+  #breath-circles-two .inhale {
+    color: #f6f9f9;
+    text-transform: uppercase;
+    font-weight: bold; }
+  #breath-circles-two .circles {
+    position: relative;
+    width: 560px;
+    height: 560px;
+    margin: 10px 0; }
+    #breath-circles-two .circles .circle {
+      border-radius: 50%;
+      border: 2px solid #f6f9f9;
+      background: #95cfc3;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0%) scale(1);
+      transform-origin: bottom;
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+      width: calc(180px);
+      height: calc(180px); }
+      #breath-circles-two .circles .circle:nth-child(2) {
+        z-index: 7; }
+      #breath-circles-two .circles .circle:nth-child(3) {
+        animation-name: inhale-3;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        z-index: 6; }
+
+@keyframes inhale-3 {
+  5% {
+    transform: translate(-50%, 0%) scale(1);
+    content: 'inhale'; }
+  100% {
+    transform: translate(-50%, 0%) scale(1.5);
+    content: 'exhale'; } }
+      #breath-circles-two .circles .circle:nth-child(4) {
+        animation-name: inhale-4;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        z-index: 5; }
+
+@keyframes inhale-4 {
+  5% {
+    transform: translate(-50%, 0%) scale(1);
+    content: 'inhale'; }
+  100% {
+    transform: translate(-50%, 0%) scale(2);
+    content: 'exhale'; } }
+      #breath-circles-two .circles .circle:nth-child(5) {
+        animation-name: inhale-5;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        z-index: 4; }
+
+@keyframes inhale-5 {
+  5% {
+    transform: translate(-50%, 0%) scale(1);
+    content: 'inhale'; }
+  100% {
+    transform: translate(-50%, 0%) scale(2.5);
+    content: 'exhale'; } }
+      #breath-circles-two .circles .circle:nth-child(6) {
+        animation-name: inhale-6;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        z-index: 3; }
+
+@keyframes inhale-6 {
+  5% {
+    transform: translate(-50%, 0%) scale(1);
+    content: 'inhale'; }
+  100% {
+    transform: translate(-50%, 0%) scale(3);
+    content: 'exhale'; } }
+      #breath-circles-two .circles .circle:nth-child(7) {
+        animation-name: inhale-7;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        z-index: 2; }
+
+@keyframes inhale-7 {
+  5% {
+    transform: translate(-50%, 0%) scale(1);
+    content: 'inhale'; }
+  100% {
+    transform: translate(-50%, 0%) scale(3.5);
+    content: 'exhale'; } }
+
+body,
+html {
+  margin: 0;
+  padding: 0; }
+
+* {
+  box-sizing: content-box; }
